@@ -159,12 +159,8 @@ pub struct GetNetworkInfoAddress {
 impl GetNetworkInfo {
     /// Converts version specific type to a version in-specific, more strongly typed type.
     pub fn into_model(self) -> Result<model::GetNetworkInfo, ParseAmountError> {
-        // Relay fee is measured in BTC/kB.
-        let relay_fee = self.relay_fee / 1000;        // BTC per byte
-        let relay_fee = Amount::from_btc(relay_fee)?; // sats per byte
-        let relay_fee = FeeRate::from_sat_per_vb(relay_fee); // Virtual bytes equal bytes before segwit.
-        // Same for incremental_fee (BTC/kB).
-        let incremental_fee = FeeRate::from_sat_per_vb(Amount::from_btc(self.incremental_fee / 1000)?);
+        let relay_fee = super::btc_per_kb(self.relay_fee);
+        let incremental_fee = super::btc_per_kb(self.incremental_fee);
 
         model::GetNetworkInfo {
             version: self.version,
@@ -291,18 +287,10 @@ pub struct PeerInfo {
     pub whitelisted: bool,
     /// The total bytes sent aggregated by message type.
     #[serde(rename = "bytessent_per_msg")]
-    pub bytes_sent_per_message: Vec<BytesPerMessage>,
+    pub bytes_sent_per_message: BTreeMap<String, u64>,
     /// The total bytes received aggregated by message type.
     #[serde(rename = "bytesrecv_per_msg")]
-    pub bytes_received_per_message: Vec<BytesPerMessage>,
-}
-
-/// An item from the list returned by the JSON-RPC method `getpeerinfo`.
- // FIXME: The docs show invalid JSON so I don't know exactly what this should be.
-#[derive(Clone, Debug, PartialEq, Deserialize, Serialize)]
-pub struct BytesPerMessage {
-    #[serde(rename = "addr")]
-    pub address: u32,
+    pub bytes_received_per_message: BTreeMap<String, u64>,
 }
 
 /// Result of JSON-RPC method `listbanned`.

@@ -95,48 +95,50 @@
 //! - [ ] `verifymessage "address" "signature" "message"`
 //!
 //! **== Wallet ==**
-//! - [ ] `abandontransaction "txid"`
-//! - [ ] `abortrescan`
-//! - [ ] `addmultisigaddress nrequired ["key",...] ( "label" "address_type" )`
-//! - [ ] `backupwallet "destination"`
-//! - [ ] `bumpfee "txid" ( options ) `
+//! - [-] `abandontransaction "txid"`
+//! - [-] `abortrescan`
+//! - [x] `addmultisigaddress nrequired ["key",...] ( "label" "address_type" )`
+//! - [-] `backupwallet "destination"`
+//! - [x] `bumpfee "txid" ( options ) `
 //! - [x] `createwallet "wallet_name" ( disable_private_keys )`
-//! - [ ] `dumpprivkey "address"`
-//! - [ ] `dumpwallet "filename"`
-//! - [ ] `encryptwallet "passphrase"`
-//! - [ ] `getaccount (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`
-//! - [ ] `getaccountaddress (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`
-//! - [ ] `getaddressbyaccount (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`
-//! - [ ] `getaddressesbylabel "label"`
-//! - [ ] `getaddressinfo "address"`
+//! - [x] `dumpprivkey "address"`
+//! - [x] `dumpwallet "filename"`
+//! - [-] `encryptwallet "passphrase"`
+//! - [-] `getaccount (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`
+//! - [-] `getaccountaddress (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`
+//! - [-] `getaddressbyaccount (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`
+//! - [x] `getaddressesbylabel "label"`
+//! - [x] `getaddressinfo "address"`
 //! - [x] `getbalance ( "(dummy)" minconf include_watchonly )`
 //! - [x] `getnewaddress ( "label" "address_type" )`
 //! - [ ] `getrawchangeaddress ( "address_type" )`
-//! - [ ] `getreceivedbyaccount (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`
+//! - [-] `getreceivedbyaccount (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`
 //! - [ ] `getreceivedbyaddress "address" ( minconf )`
 //! - [x] `gettransaction "txid" ( include_watchonly )`
 //! - [ ] `getunconfirmedbalance`
 //! - [ ] `getwalletinfo`
-//! - [ ] `importaddress "address" ( "label" rescan p2sh )`
-//! - [ ] `importmulti "requests" ( "options" )`
-//! - [ ] `importprivkey "privkey" ( "label" ) ( rescan )`
-//! - [ ] `importprunedfunds`
-//! - [ ] `importpubkey "pubkey" ( "label" rescan )`
-//! - [ ] `importwallet "filename"`
-//! - [ ] `keypoolrefill ( newsize )`
-//! - [ ] `listaccounts (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`
+//! - [-] `importaddress "address" ( "label" rescan p2sh )`
+//! - [-] `importmulti "requests" ( "options" )`
+//! - [-] `importprivkey "privkey" ( "label" ) ( rescan )`
+//! - [-] `importprunedfunds`
+//! - [-] `importpubkey "pubkey" ( "label" rescan )`
+//! - [-] `importwallet "filename"`
+//! - [-] `keypoolrefill ( newsize )`
+//! - [-] `listaccounts (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`
 //! - [ ] `listaddressgroupings`
 //! - [ ] `listlabels ( "purpose" )`
 //! - [ ] `listlockunspent`
-//! - [ ] `listreceivedbyaccount (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`
+//! - [-] `listreceivedbyaccount (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`
 //! - [ ] `listreceivedbyaddress ( minconf include_empty include_watchonly address_filter )`
+
 //! - [ ] `listsinceblock ( "blockhash" target_confirmations include_watchonly include_removed )`
 //! - [ ] `listtransactions (label count skip include_watchonly)`
 //! - [ ] `listunspent ( minconf maxconf  ["addresses",...] [include_unsafe] [query_options])`
 //! - [ ] `listwallets`
 //! - [x] `loadwallet "filename"`
+
 //! - [ ] `lockunspent unlock ([{"txid":"txid","vout":n},...])`
-//! - [ ] `move (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`
+//! - [ ] `move (Deprecated, will be removed in V0.18. To use this command, start bitcboind with -deprecatedrpc=accounts)`
 //! - [ ] `removeprunedfunds "txid"`
 //! - [ ] `rescanblockchain ("start_height") ("stop_height")`
 //! - [ ] `sendfrom (Deprecated, will be removed in V0.18. To use this command, start bitcoind with -deprecatedrpc=accounts)`

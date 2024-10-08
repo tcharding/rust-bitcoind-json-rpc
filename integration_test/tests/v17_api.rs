@@ -60,6 +60,12 @@ mod raw_transactions {
 mod wallet {
     use super::*;
 
+    impl_test_v17__addmultisigaddress!();
+    impl_test_v17__bumpfee!();
+    impl_test_v17__dumpprivkey!();
+    impl_test_v17__dumpwallet!();
+    impl_test_v17__getaddressesbylabel!();
+    impl_test_v17__getaddressinfo!();
     impl_test_v17__createwallet!();
     impl_test_v17__loadwallet!();
     // impl_test_v17__unloadwallet!();

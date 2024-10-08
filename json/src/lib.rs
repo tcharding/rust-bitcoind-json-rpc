@@ -22,3 +22,10 @@ pub mod v27;
 
 // JSON types that model _all_ `bitcoind` versions.
 pub mod model;
+
+/// Converts `fee_rate` in BTC/kB to `FeeRate`.
+fn btc_per_kb(fee_rate: f64) -> FeeRate {
+    let rate = self.rate / 1000;        // BTC per byte
+    let rate = Amount::from_btc(rate)?; // sats per byte
+    let rate = FeeRate::from_sat_per_vb(rate); // Virtual bytes equal bytes before segwit.
+}

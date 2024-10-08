@@ -55,6 +55,12 @@ crate::impl_client_v17__getpeerinfo!();
 crate::impl_client_v17__sendrawtransaction!();
 
 // == Wallet ==
+crate::impl_client_v17__addmultisigaddress!();
+crate::impl_client_v17__bumpfee!();
+crate::impl_client_v17__dumpprivkey!();
+crate::impl_client_v17__dumpwallet!();
+crate::impl_client_v17__getaddressesbylabel!();
+crate::impl_client_v17__getaddressinfo!();
 crate::impl_client_v17__createwallet!();
 crate::impl_client_v17__unloadwallet!();
 crate::impl_client_v17__loadwallet!();

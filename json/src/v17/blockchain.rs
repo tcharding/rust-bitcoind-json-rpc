@@ -971,7 +971,7 @@ impl GetTxOut {
             script_pubkey: ScriptBuf::from_hex(&self.script_pubkey.hex).map_err(E::ScriptPubkey)?,
         };
 
-        let address = Address::from_str(&self.script_pubkey.address).map_err(E::Address)?;
+        let address = self.script_pubkey.address.parse::<Address<NetworkUnchecked>>().map_err(E::Address)?.assume_checked();
 
         Ok(model::GetTxOut {
             best_block,

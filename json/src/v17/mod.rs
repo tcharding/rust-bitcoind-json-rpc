@@ -10,7 +10,7 @@
 //! Key:
 //! - `[ ]` means not yet done.
 //! - `[x]` marks means implemented _and_ tested.
-//! - `[-]` means it was considered and intentionally not done.
+//! - `[-]` means intentionally not done, typically because method does not return anything.
 //!
 //! **== Blockchain ==**
 //! - [x] `getbestblockhash`
@@ -60,7 +60,7 @@
 //! - [-] `addnode "node" "add|remove|onetry"`
 //! - [-] `clearbanned`
 //! - [-] `disconnectnode "[address]" [nodeid]`
-//! - [ ] `getaddednodeinfo ( "node" )`
+//! - [x] `getaddednodeinfo ( "node" )`
 //! - [-] `getconnectioncount`
 //! - [x] `getnettotals`
 //! - [x] `getnetworkinfo`

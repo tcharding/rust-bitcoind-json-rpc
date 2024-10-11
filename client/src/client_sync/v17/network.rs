@@ -9,6 +9,16 @@
 //!
 //! See, or use the `define_jsonrpc_minreq_client!` macro to define a `Client`.
 
+/// Implements bitcoind JSON-RPC API method `getaddednodeinfo`
+#[macro_export]
+macro_rules! impl_client_v17__getaddednodeinfo {
+    () => {
+        impl Client {
+            pub fn get_added_node_info(&self) -> Result<GetAddedNodeInfo> { self.call("getaddednodeinfo", &[]) }
+        }
+    };
+}
+
 /// Implements bitcoind JSON-RPC API method `getnettotals`
 #[macro_export]
 macro_rules! impl_client_v17__getnettotals {

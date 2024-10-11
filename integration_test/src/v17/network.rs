@@ -7,6 +7,18 @@
 
 /// Requires `Client` to be in scope and to implement `get_network_info`.
 #[macro_export]
+macro_rules! impl_test_v17__getaddednodeinfo {
+    () => {
+        #[test]
+        fn get_added_node_info() {
+            let bitcoind = $crate::bitcoind_no_wallet();
+            let _ = bitcoind.client.get_added_node_info().expect("getaddednodeinfo");
+        }
+    };
+}
+
+/// Requires `Client` to be in scope and to implement `get_network_info`.
+#[macro_export]
 macro_rules! impl_test_v17__getnettotals {
     () => {
         #[test]
@@ -17,15 +29,18 @@ macro_rules! impl_test_v17__getnettotals {
     };
 }
 
-/// Requires `Client` to be in scope and to implement `get_network_info`.
+/// Requires `Client` to be in scope and to implement `get_network_info` and
+/// `check_expected_server_version`.
 #[macro_export]
 macro_rules! impl_test_v17__getnetworkinfo {
     () => {
         #[test]
         fn get_network_info() {
             let bitcoind = $crate::bitcoind_no_wallet();
-            let _ = bitcoind.client.get_network_info().expect("getnetworkinfo");
+            let json = bitcoind.client.get_network_info().expect("getnetworkinfo");
+            assert!(json.into_model().is_ok());
 
+            // Server version is returned as part of the getnetworkinfo method.
             bitcoind.client.check_expected_server_version().expect("unexpected version");
         }
     };

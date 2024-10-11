@@ -9,8 +9,8 @@
 //!
 //! Key:
 //! - `[ ]` means not yet done.
-//! - `[x]` marks means implemented _and_ tested.
-//! - `[-]` means intentionally not done, typically because method does not return anything.
+//! - `[x]` means implemented _and_ tested.
+//! - `[-]` means intentionally not done, typically because method does not return anything or is deprecated.
 //!
 //! **== Blockchain ==**
 //! - [x] `getbestblockhash`

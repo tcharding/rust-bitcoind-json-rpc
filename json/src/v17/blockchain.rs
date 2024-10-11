@@ -42,8 +42,6 @@ impl GetBestBlockHash {
 /// Result of JSON-RPC method `getblock` with verbosity set to 0.
 ///
 /// A string that is serialized, hex-encoded data for block 'hash'.
-///
-/// Method call: `getblock "blockhash" ( verbosity )`
 #[derive(Clone, PartialEq, Debug, Deserialize, Serialize)]
 pub struct GetBlockVerbosityZero(pub String);
 
@@ -613,7 +611,7 @@ pub struct GetBlockStats {
     /// Average fee in the block.
     #[serde(rename = "avgfee")]
     pub average_fee: u64,
-    // TODO: Remember these doces will become silently stale when unit changes in a later version of Core.
+    // TODO: Remember these docs will become silently stale when unit changes in a later version of Core.
     /// Average feerate (in satoshis per virtual byte).
     #[serde(rename = "avgfeerate")]
     pub average_fee_rate: u64,

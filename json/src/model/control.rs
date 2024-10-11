@@ -4,3 +4,5 @@
 //!
 //! These structs model the types returned by the JSON-RPC API but have concrete types
 //! and are not specific to a specific version of Bitcoin Core.
+
+// Control types currently have no need for model equivalents.

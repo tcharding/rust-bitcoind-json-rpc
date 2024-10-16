@@ -82,4 +82,3 @@ fn btc_per_kb(btc_per_kb: f64) -> Result<Option<FeeRate>, ParseAmountError> {
 
     Ok(rate)
 }
-

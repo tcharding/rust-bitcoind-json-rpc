@@ -11,3 +11,31 @@ path = "json"
 
 [patch.crates-io.jsonrpc]
 path = "jsonrpc"
+
+[patch.crates-io.base58ck]
+git = "https://github.com/tcharding/rust-bitcoin"
+branch = "10-16-set-version-to-alpha"
+
+[patch.crates-io.bitcoin]
+git = "https://github.com/tcharding/rust-bitcoin"
+branch = "10-16-set-version-to-alpha"
+
+[patch.crates-io.bitcoin_hashes]
+git = "https://github.com/tcharding/rust-bitcoin"
+branch = "10-16-set-version-to-alpha"
+
+[patch.crates-io.bitcoin-internals]
+git = "https://github.com/tcharding/rust-bitcoin"
+branch = "10-16-set-version-to-alpha"
+
+[patch.crates-io.bitcoin-io]
+git = "https://github.com/tcharding/rust-bitcoin"
+branch = "10-16-set-version-to-alpha"
+
+[patch.crates-io.bitcoin-primitives]
+git = "https://github.com/tcharding/rust-bitcoin"
+branch = "10-16-set-version-to-alpha"
+
+[patch.crates-io.bitcoin-units]
+git = "https://github.com/tcharding/rust-bitcoin"
+branch = "10-16-set-version-to-alpha"

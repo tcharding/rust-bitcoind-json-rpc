@@ -9,8 +9,10 @@ use std::fmt;
 use std::str::FromStr;
 
 use bitcoin::consensus::encode;
-use bitcoin::error::UnprefixedHexError;
 use bitcoin::hex::FromHex;
+use bitcoin::parse::UnprefixedHexError;
+use bitcoin::pow::CompactTargetExt as _;
+use bitcoin::script::ScriptBufExt as _;
 use bitcoin::{
     address, amount, block, hex, network, Address, Amount, Block, BlockHash, CompactTarget,
     FeeRate, Network, ScriptBuf, TxMerkleNode, TxOut, Txid, Weight, Work,

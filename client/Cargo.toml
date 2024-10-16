@@ -26,7 +26,7 @@ rustdoc-args = ["--cfg", "docsrs"]
 client-sync = ["jsonrpc"]
 
 [dependencies]
-bitcoin = { version = "0.32.0", default-features = false, features = ["std", "serde"] }
+bitcoin = { version = "0.33.0-alpha", default-features = false, features = ["std", "serde"] }
 json = { package = "bitcoind-json-rpc-types", version = "0.3.0", default-features = false, features = [] }
 log = "0.4"
 serde = { version = "1.0.103", default-features = false, features = [ "derive", "alloc" ] }

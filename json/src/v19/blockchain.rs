@@ -7,7 +7,7 @@
 use core::fmt;
 use std::collections::BTreeMap;
 
-use bitcoin::error::UnprefixedHexError;
+use bitcoin::parse::UnprefixedHexError;
 use bitcoin::{hex, network, BlockHash, Network, Work};
 use internals::write_err;
 use serde::{Deserialize, Serialize};
